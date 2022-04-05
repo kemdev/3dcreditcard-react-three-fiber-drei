@@ -19,25 +19,22 @@ import {
   OrbitControls,
   useProgress,
   Html,
-  FirstPersonControls,
+  FirstPersonControls
 } from "@react-three/drei";
 
 import Buttons from "./buttons";
 import Card from "./card";
 import Canvas from "./canvas";
+
 function Loader() {
   const { progress } = useProgress();
+  console.log("Loader is loaded");
   return (
     <div
       style={{ fontSize: "4em", color: "hotpink", fontWeight: "bolder" }}
       className="textShadow"
     >
-      <Canvas>
-        {progress} % loaded
-        <EffectComposer>
-          <Glitch />
-        </EffectComposer>
-      </Canvas>
+      {progress} % loaded
     </div>
   );
 }
@@ -78,7 +75,7 @@ export default function Scene() {
         .toString()
         .substring(2),
       cardNumber: cardInformation[index]?.data?.card.number,
-      expMonth: cardInformation[index]?.data?.card.expirationMonth.toString(),
+      expMonth: cardInformation[index]?.data?.card.expirationMonth.toString()
     });
     // setShow(true);
 
@@ -120,10 +117,10 @@ export default function Scene() {
                 customCardHandler={customCardHandler}
               />
             </Html>
+
             <OrbitControls />
           </Card>
           {/* <OrbitControls enablePan={false} zoomSpeed={0.5} /> */}
-
         </Canvas>
       ) : null}
     </main>

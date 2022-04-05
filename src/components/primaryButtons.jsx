@@ -3,12 +3,16 @@ import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import { MDBIcon } from "mdb-react-ui-kit";
 
-
-export default function primaryButtons({handleSubmitButton, setIsRandom, leftText, rightText}) {
+export default function primaryButtons({
+  handleSubmitButton,
+  setIsRandom,
+  leftText,
+  rightText
+}) {
   return (
     <ButtonGroup
       className="reGenerateContainer"
-      style={{ zIndex: 1, marginTop: "45vh", position: "absolute", }}
+      style={{ zIndex: 1, marginTop: "45vh", position: "absolute" }}
     >
       <Button
         color="success"
