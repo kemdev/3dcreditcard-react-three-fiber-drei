@@ -6,21 +6,20 @@ import Button from "react-bootstrap/Button";
 
 export default function Buttons({ setIsRandom, handleSubmitButton }) {
   return (
-    <>
-      <ButtonGroup
-        style={{ marginTop: "45vh" }}
-        className="reGenerateContainer"
+    <ButtonGroup
+      // style={{ marginTop: "45vh" }}
+      className="reGenerateContainer"
+    >
+      <Button
+        className="reGenerateButton mx-5 p-4"
+        onClick={() => {
+          setIsRandom("yes");
+          handleSubmitButton();
+        }}
       >
-        <Button
-          className="reGenerateButton mx-5"
-          onClick={() => {
-            setIsRandom("yes");
-            handleSubmitButton();
-          }}
-        >
-          Generate Random Credit Card
-        </Button>
-        <Button className="reGenerateButton" onClick={() => setIsRandom("no")}>
+        Generate Random Credit Card
+      </Button>
+      {/* <Button className="reGenerateButton" onClick={() => setIsRandom("no")}>
           <MDBTooltip
             tag="span"
             // wrapperProps={{ button: "EnterMy" }}
@@ -28,8 +27,7 @@ export default function Buttons({ setIsRandom, handleSubmitButton }) {
           >
             Enter my Credit Card Data
           </MDBTooltip>
-        </Button>
-      </ButtonGroup>
-    </>
+        </Button> */}
+    </ButtonGroup>
   );
 }

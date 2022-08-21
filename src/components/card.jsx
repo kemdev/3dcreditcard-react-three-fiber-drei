@@ -7,11 +7,6 @@ export default function Card({ children, width, height }) {
   // Set up state for the hovered and active state
   const [hovered, setHover] = useState(false);
   const [active, setActive] = useState(false);
-
-  // useFrame(() => {
-  //   console.log('Mesh from Cards:', mesh.current);
-  // })
-
   return (
     <RoundedBox
       args={[width || 12, height || 7, 0.2]}

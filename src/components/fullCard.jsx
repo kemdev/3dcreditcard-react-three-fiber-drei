@@ -12,7 +12,7 @@ import { Html, PresentationControls } from "@react-three/drei";
 
 export default function FullCard(props) {
   // tranform Z axis to fix the text from being inside the card
-  const fixTxtOnCard = 0.16;
+  const fixTxtOnCard = 0.4;
 
   // Fix the size of the stage
   const stageSizeAllAxis = 2;

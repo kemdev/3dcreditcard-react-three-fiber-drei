@@ -93,7 +93,6 @@ export default function ToCanvas({ children }) {
         // shadows
         shadowMap
         dpr={[1, 2]}
-        pixelRatio={[1, 1.5]}
         camera={{ position: [0, 3, 75], fov: 25 }}
         resize={{ scroll: true, debounce: { scroll: 50, resize: 0 } }}
         onUpdate={(self) => self.camera.updateProjectionMatrix()}
