@@ -20,8 +20,6 @@ export default function Text(props) {
   useFrame(() => {
     mesh.current.geometry.center();
     mesh.current.updateMatrix();
-
-    // console.log(mesh.current);
   });
 
   const font = new FontLoader().parse(fontFamily);

@@ -20,8 +20,6 @@ export default function Header(props) {
     setCardInfo();
   };
 
-  console.log(firstName);
-
   return (
     <div className="header" style={props?.style}>
       <h1 className={`title display-1 my-4 text-center`}>
